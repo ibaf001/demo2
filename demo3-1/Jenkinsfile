@@ -21,7 +21,7 @@ pipeline {
    }
    post {
       success {
-         archiveArtifacts 'test-results.txt'.    //create a build Artifact under current build
+         archiveArtifacts 'test-results.txt'   //create a build Artifact under current build
       }
    }
 }
