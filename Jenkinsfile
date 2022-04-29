@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('stage1') {
       steps {
-        echo 'this is my build $BUILD of job called $DEMO_NUMBER'
+        sh 'echo "this is Ibolas build number: $BUILD_NUMBER for project $DEMO "'
       }
     }
 
