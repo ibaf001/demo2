@@ -29,14 +29,16 @@ pipeline {
    post {
       success {
          archiveArtifacts 'test-results.txt'
-         slackSend channel: '#builds',
-                   color: 'good',
-                   message: "Release ${env.RELEASE}, success: ${currentBuild.fullDisplayName}."
+//          slackSend channel: '#builds',
+//                    color: 'good',
+//                    message: "Release ${env.RELEASE}, success: ${currentBuild.fullDisplayName}."
+         echo "success my friend ... wumela!! "
       }
       failure {
-         slackSend channel: '#builds',
-                   color: 'danger',
-                   message: "Release ${env.RELEASE}, FAILED: ${currentBuild.fullDisplayName}."
+//          slackSend channel: '#builds',
+//                    color: 'danger',
+//                    message: "Release ${env.RELEASE}, FAILED: ${currentBuild.fullDisplayName}."
+         echo "exception was thrown ...ibolas"
       }
    }
 }
